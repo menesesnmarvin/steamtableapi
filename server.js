@@ -14,7 +14,9 @@ app.use(cors());
 app.use(express.json())
 
 const pressureRouter = require('./routes/pressure')
+const temperatureRouter = require('./routes/temperature')
 
 app.use('/pressure', pressureRouter)
+app.use('/temperature', temperatureRouter)
 
 app.listen(5000, () => console.log("Server Started"))
